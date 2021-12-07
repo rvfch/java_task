@@ -17,6 +17,15 @@ public class Task1 {
      * @return - the length of the last word in the string.
      */
     public int lengthOfLastWord(String str) {
+        // check if str is not null and we can work with it
+        if (str != null) {
+            // remove leading and trailing spaces
+            str = str.trim();
+            // get last word from string
+            String lastWord = str.substring(str.lastIndexOf(" ") + 1);
+            // return length
+            return lastWord.length();
+        }
         return 0;
     }
 }
